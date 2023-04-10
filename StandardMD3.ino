@@ -1,16 +1,18 @@
 #include "MD3.h"
 
+unsigned long time;
+
 void setup() {
     StartDisplay();
 }
+
 void loop(){
-    bool stopMenu = false;
-    while (!stopMenu){
-        enc.tick();
+    enc.tick();
+    if (millis()-time>1000){
         PrintMainPage();
-        if (enc.isSingle()){
-            stopMenu = MainMenu();
-        }
+        time = millis();
     }
-    
+    if (enc.isSingle()){
+        MainMenu();
+    }
 }
