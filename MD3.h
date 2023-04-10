@@ -27,9 +27,13 @@ void PrintMainPage(){
     lcd.println(millis());
     lcd.display();
 }
+// Функция отображения метеоданных
+
+////////////////////////////////////
+
 
 // Главное меню
-bool MainMenu(){
+void MainMenu(){
     bool stopMenu = false;
     uint8_t counterMainMenu = 1;
     PrintMainMenuPage(counterMainMenu);
@@ -42,7 +46,6 @@ bool MainMenu(){
             PrintMainMenuPage (counterMainMenu);
         }
     }
-    return stopMenu;
 }
 // Страница отображения меню
 void PrintMainMenuPage(uint8_t counterMainMenu){
@@ -118,6 +121,3 @@ void checkTurning(uint8_t *counter){
        *counter = constrain(*counter + 1, 1, ITEMS - 1); 
         } 
 }
-
-
- 
