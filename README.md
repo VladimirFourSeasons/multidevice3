@@ -1,6 +1,6 @@
 # Multidevice version 3.0
 
-Some kind of universal device,
+Some kind of universal arduino based device,
  firmware for it and other goodies.
 Previous versions of the device do not
  now have a physical implementation
